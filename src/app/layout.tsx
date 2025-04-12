@@ -1,5 +1,7 @@
 
+import theme from "./theme/theme";
 import "./globals.css";
+import { ThemeProvider } from '@mui/material/styles';
 
 export default function RootLayout({
   children,
@@ -8,10 +10,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        
-      >
+      <body>
+      <ThemeProvider theme={theme}>
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );
